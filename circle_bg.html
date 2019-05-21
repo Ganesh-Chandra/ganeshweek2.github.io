@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="mainw.css">
+    <title>poke </title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript">
+
+
+        $(function () {
+            $.getJSON("https://dev-util.edyst.com/challenge/pokemons/random", function (data,status) {
+
+                $("#nametxt0").text(data[0].name);
+                $("#nametxt1").text(data[1].name);
+                $("#nametxt2").text(data[2].name);
+                $("#nameid0").css("background-color",data[0]["cardColors"].textbg);
+                $("#nameid1").css("background-color",data[1]["cardColors"].textbg);
+                $("#nameid2").css("background-color",data[2]["cardColors"].textbg);
+                $("#namedes0").text(data[0].description);
+                $("#namedes1").text(data[1].description);
+                $("#namedes2").text(data[2].description);
+                $("#namedbg0").css("background-color",data[0]["cardColors"].textbg);
+                $("#namedbg1").css("background-color",data[1]["cardColors"].textbg);
+                $("#namedbg2").css("background-color",data[2]["cardColors"].textbg);
+
+                $("#img0").css("background-color",data[0]["cardColors"].imgbg);
+                $("#img1").css("background-color",data[1]["cardColors"].imbgbg);
+                $("#img2").css("background-color",data[2]["cardColors"].imgbg);
+
+                $("#img0").attr("src",data[0].sprite);
+                $("#img1").attr("src",data[1].sprite);
+                $("#img2").attr("src",data[2].sprite);
+
+                $("#c1").css("background-color",data[0]["cardColors"].bg);
+                $("#c2").css("background-color",data[1]["cardColors"].bg);
+                $("#c3").css("background-color",data[2]["cardColors"].bg);
+                
+            });
+        });
+
+    </script>
+
+</head>
+
+
+<body>
+    <br><br>
+<div class="container">
+    <div class="row">
+            <div class="col-md-1 ">
+                    <p></p>
+                </div>
+        <div class="col-md-3 " id="c1">
+                <br>
+
+            <div class="name1"id="nameid0" >
+                <b><p id="nametxt0">Charizad</p></b>
+            </div>
+            <br><br>
+
+            <div class="des1" id="namedbg0">
+                <p id="namedes0">Charizad is a bipedal, reptilian Pokemon with a primarily orange body. Spits fire that is hot
+                    enough to melt boulders. Known to cause forest fires unintentionally</p>
+            </div>
+            <br><br>
+
+            <div class="img1" id="imgbg0">
+                <center><img id="img0" src="char.png"></center>
+            </div>
+
+        </div>
+        <div class="col-md-1 ">
+            <p></p>
+        </div>
+        <div class="col-md-3" id="c2">
+                <br>
+
+            <div class="name2" id="nameid1">
+                <b><p id="nametxt1">Squirtle</p></b>
+            </div>
+            <br><br>
+
+            <div class="des2" id="namedbg1">
+                <p id="namedes1" >Squirtle is a small Pokemon that resembles a light blue turtle. While it typically walks on its
+                    two short legs, it has been shown to run on all fours in Super Smash Bros.</p>
+            </div>
+            <br><br>
+            <div class="img2" id="imgbg1">
+                <center><img id="img1" src="squr.png"></center>
+            </div>
+
+        </div>
+
+        <div class="col-md-1 ">
+                <p></p>
+            </div>
+        <div class="col-md-3 " id="c3">
+                <br>
+
+            <div class="name3" id="nameid2">
+                <b><p id="nametxt2">Pikachu</p></b>
+            </div>
+            <br><br>
+
+            <div class="des3" id="namedbg2">
+                <p id="namedes2">Pikachu is a Mouse Pokemon and the evolved form of Pichu. Pikachu's tail is sometimes struck by
+                    lightning as it raises it to check its surroundings.</p>
+            </div>
+            <br><br>
+            <div class="img3" id="imgbg2">
+                <center><img id="img2" src="pika.png"></center>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+</body>
+
+</html>
