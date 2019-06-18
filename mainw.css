@@ -29,6 +29,7 @@
 #img2{
     background: #93f9ea;
     border-radius: 50%;
+    
 }
 
 #img0{
@@ -40,20 +41,23 @@
 #nametxt0{
     background: #fab275;
     display: inline-flex;   
-    border-radius: 10%;   
+    border-radius: 14%;   
+    padding:2%;
 }
 
 
 #nametxt1{
     background: #a6e3eb;
     display: inline-flex;
-    border-radius: 10%;
+    border-radius: 14%;
+    padding:2%;
 }
 
 #nametxt2{
     background: #f5ff67;
     display: inline-flex;
-    border-radius: 10%;
+    border-radius: 14%;
+    padding:2%;
 }
 
 
