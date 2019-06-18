@@ -37,20 +37,20 @@
 }
 
 
-.name1{
+#nametxt0{
     background: #fab275;
     display: inline-flex;   
     border-radius: 10%;   
 }
 
 
-.name2{
+#nametxt1{
     background: #a6e3eb;
     display: inline-flex;
     border-radius: 10%;
 }
 
-.name3{
+#nametxt2{
     background: #f5ff67;
     display: inline-flex;
     border-radius: 10%;
